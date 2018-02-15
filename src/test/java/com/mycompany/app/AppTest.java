@@ -46,12 +46,12 @@ public class AppTest
     }
     public void testSmallMaxSize(){
     	Integer[] a={1,2,3,4,5};
-        Integer[] b={4,5};
+    	Integer[] b={4,5};
         assertEquals(-1,App.containsAll(a,b,1,4));
     }
     public void testBigArraySmaller(){
     	Integer[] a={1,2,3,4,5};
-        Integer[] b={4,5};
+    	Integer[] b={4,5};
         assertEquals(-1,App.containsAll(b,a,1,6));
     }
     public void testEmptyArray(){
@@ -61,7 +61,7 @@ public class AppTest
     }
     public void testContains(){
     	Integer[] a={1,2,3,4,5};
-        Integer[] b={4,5};
+    	Integer[] b={4,5};
         assertEquals(3,App.containsAll(a,b,1,6));
     }
     public void testNotContains(){
