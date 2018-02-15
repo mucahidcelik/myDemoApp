@@ -5,3 +5,5 @@ Otherwise returns -1.
 Other two integer parameters of method is minSize and maxSize:
 minSize:subarray's length cannot be smaller then minSize.
 maxSize:main array's length cannot be bigger than maxSize.
+
+[![Build Status](https://travis-ci.org/nuyageva/myDemoApp.svg?branch=master)](https://travis-ci.org/nuyageva/myDemoApp)
