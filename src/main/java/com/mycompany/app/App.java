@@ -11,9 +11,6 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App{
 	public static int containsAll(Integer[] bigArray,Integer[] smallArray,int minSize,int maxSize){
-
-
-		
 		if(bigArray.length<=smallArray.length||maxSize<bigArray.length||minSize>smallArray.length||smallArray.length<1)
 			return -1;
 
@@ -32,15 +29,9 @@ public class App{
 	}
 	public static void main(String[] args) {
 		port(getHerokuAssignedPort());
-		
 		get("/", (req, res) -> "Hello, World");
-
 		post("/compute", (req, res) -> {
-			//System.out.println(req.queryParams("input1"));
-			//System.out.println(req.queryParams("input2"));
-			//System.out.println(req.queryParams("input3"));
-			//System.out.println(req.queryParams("input4"));
-			
+
 			String input1 = req.queryParams("input1");
 			java.util.Scanner sc1 = new java.util.Scanner(input1);
 			sc1.useDelimiter("[;\r\n]+");
@@ -51,27 +42,15 @@ public class App{
               inputList1.add(value);
             }
             System.out.println(inputList1);
-            System.out.println("1");
-            
-            String input2 = req.queryParams("input2");
-           
-            System.out.println("2");
-            
+            String input2 = req.queryParams("input2");            
             java.util.Scanner sc2 = new java.util.Scanner(input2);
-            
-            System.out.println("3");
-			
             sc2.useDelimiter("[;\r\n]+");
-            
             java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
-            System.out.println("4");
             while (sc2.hasNext())
             {
-            	System.out.println("5");
               int value = Integer.parseInt(sc2.next().replaceAll("\\s",""));
               inputList2.add(value);
             }
-            System.out.println("6");
             System.out.println(inputList2);
             
             String input3 = req.queryParams("input3").replaceAll("\\s","");
@@ -92,8 +71,6 @@ public class App{
             	small[cou]=i;
             	cou++;
             }
-    		System.out.println(big);
-    		System.out.println(small);
             int result = App.containsAll(big,small,input3AsInt,input4AsInt);
 
             Map map = new HashMap();

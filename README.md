@@ -7,3 +7,5 @@ minSize:subarray's length cannot be smaller then minSize.
 maxSize:main array's length cannot be bigger than maxSize.
 
 [![Build Status](https://travis-ci.org/nuyageva/myDemoApp.svg?branch=master)](https://travis-ci.org/nuyageva/myDemoApp)
+
+Demo site: https://intense-lake-44373.herokuapp.com/compute
