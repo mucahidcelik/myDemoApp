@@ -35,9 +35,10 @@ public class App{
 		get("/", (req, res) -> "Hello, World");
 
 		post("/compute", (req, res) -> {
-			//System.out.println(req.queryParams("input1"));
-			//System.out.println(req.queryParams("input2"));
-			
+			System.out.println(req.queryParams("input1"));
+			System.out.println(req.queryParams("input2"));
+			System.out.println(req.queryParams("input3"));
+			System.out.println(req.queryParams("input4"));
 			
 			String input1 = req.queryParams("input1");
 			java.util.Scanner sc1 = new java.util.Scanner(input1);
@@ -52,7 +53,7 @@ public class App{
             
             String input2 = req.queryParams("input2");
 			java.util.Scanner sc2 = new java.util.Scanner(input2);
-			sc1.useDelimiter("[;\r\n]+");
+			sc2.useDelimiter("[;\r\n]+");
             java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
             while (sc2.hasNext())
             {
