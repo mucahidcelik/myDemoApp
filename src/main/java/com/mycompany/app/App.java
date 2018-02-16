@@ -11,7 +11,7 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App{
 	public static int containsAll(Integer[] bigArray,Integer[] smallArray,int minSize,int maxSize){
-		if(bigArray.length<=smallArray.length||maxSize<bigArray.length||minSize>smallArray.length||smallArray.length<1)
+		if(bigArray.length<smallArray.length||maxSize<bigArray.length||minSize>smallArray.length||smallArray.length<1)
 			return -1;
 
 		boolean flag=true;
